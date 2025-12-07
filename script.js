@@ -8,7 +8,7 @@ const clearHistoryBtn = document.getElementById("clear-history");
 
 let history = [];
 
-// ✅ Add event listeners for calculator buttons
+// Add event listeners for calculator buttons
 buttons.forEach((btn) => {
   btn.addEventListener("click", () => {
     const value = btn.innerText;
@@ -38,26 +38,26 @@ buttons.forEach((btn) => {
   });
 });
 
-// ✅ Update history list
+// Update history list
 function updateHistory() {
   historyList.innerHTML = history
     .map((item) => `<li>${item}</li>`)
     .join("");
 }
 
-// ✅ Toggle show/hide history
+// Toggle show/hide history
 toggleHistoryBtn.addEventListener("click", () => {
   const hidden = historyContainer.classList.toggle("hidden");
   toggleHistoryBtn.innerText = hidden ? "Show History" : "Hide History";
 });
 
-// ✅ Clear history completely
+// Clear history completely
 clearHistoryBtn.addEventListener("click", () => {
   history = [];
   updateHistory();
 });
 
-// ✅ Keyboard support
+// Keyboard support
 document.addEventListener("keydown", (e) => {
   const key = e.key;
 
@@ -84,3 +84,4 @@ document.addEventListener("keydown", (e) => {
 
   display.value = current;
 });
+
